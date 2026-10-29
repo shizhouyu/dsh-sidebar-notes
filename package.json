@@ -1,0 +1,59 @@
+{
+  "name": "dsh-sidebar-notes",
+  "version": "1.0.0",
+  "description": "Sidebar notepad with Markdown preview for the DeepSeek Harness Web UI — a right-sidebar tab that never covers the chat. · DSH Web UI 右侧栏记事本，支持 Markdown 编辑与预览。",
+  "icon": "icon.svg",
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "shizhouyu",
+    "url": "https://github.com/shizhouyu"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shizhouyu/dsh-sidebar-notes.git"
+  },
+  "homepage": "https://github.com/shizhouyu/dsh-sidebar-notes#readme",
+  "bugs": {
+    "url": "https://github.com/shizhouyu/dsh-sidebar-notes/issues"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "notes",
+    "notepad",
+    "markdown",
+    "sidebar"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "locale",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --check client.js && node _smoke.cjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}
