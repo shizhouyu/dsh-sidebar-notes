@@ -1,5 +1,5 @@
 # sidebar-notes bundle patch: inserts this local plugin into the profile's layer stack.
 - insert:
     - id: sidebar-notes
-      name: '@local/dsh-sidebar-notes'
+      name: 'dsh-sidebar-notes'
       config: {}

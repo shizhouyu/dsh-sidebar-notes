@@ -39,7 +39,7 @@ const context = vm.createContext({
 vm.runInContext(source, context, { filename: 'client.js' });
 
 if (!captured) throw new Error('ModuleLoader.load 未被调用');
-if (captured.id !== '@local/dsh-sidebar-notes') throw new Error('模块 id 不符: ' + captured.id);
+if (captured.id !== 'dsh-sidebar-notes') throw new Error('模块 id 不符: ' + captured.id);
 
 const modules = {
   react: {

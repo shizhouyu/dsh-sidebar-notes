@@ -15,7 +15,7 @@
  * ========================================================================= */
 
 window.__ModuleLoader__.load({
-  id: '@local/dsh-sidebar-notes',
+  id: 'dsh-sidebar-notes',
   factory: (require) => {
     var module = { exports: {} };
     var exports = module.exports;
